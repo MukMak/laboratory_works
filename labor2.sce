@@ -1,22 +1,24 @@
 clear
 clc
-//laboratorna 2 v 28
+//laboratorna 2 v 15
 //input data
-r1 = 3.8
-r2 = 1.5
-r3 = 3.3
+a = 2.75
+b = 4.2
+c = 5.25
 //calculation
-r12 = r1 + r2 + r1*r2/r3
-r23 = r2 + r3 + r2*r3/r1
-r31 = r3 + r1 + r3*r1/r2
+A = acosd((b^2 + c^2 - a^2)/(2*b*c))
+B = acosd((a^2 + c^2 - b^2)/(2*a*c))
+C = 180 - A - B
+S = 0.5*a*b*sin(C)
 //output
 mprintf('\n')
-mprintf('           СОПРОТИВЛЕНИЕ ЗВЕЗДЫ, Ом:\n')
-mprintf('----------------------------------------------\n')
-mprintf('     r1 = %.2f     r2 = %.2f     r3 = %.2f\n',r1,r2,r3)
-mprintf('\n')
-mprintf('  СОПРОТИВЛЕНИЯ ЭКВИВАЛЕНТНОГО ТРЕУГОЛЬНИКА:\n')
+mprintf('ОТВЕТ ЗАДАЧИ:\n')
+mprintf('Угол A = %.2f град.\n',A)
+mprintf('Угол B = %.2f град.\n',B)
+mprintf('Угол C = %.2f град.\n',C)
+mprintf('Площадь S = %.2f кв.мм\n',S)
 mprintf('-----------------------------------------------\n')
-mprintf('                r12 = %.2f Ом\n',r12)
-mprintf('                r23 = %.2f Ом\n',r23)
-mprintf('                r31 = %.2f Ом\n',r31)
+mprintf('\n')
+mprintf('ИСХОДНЫЕ ДАНЫЕ: a=%.2f mm b=%.2f mm c=%.2f mm\n',a,b,c)
+
+
